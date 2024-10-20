@@ -1,20 +1,31 @@
-// Set name variable to what the user will input for the question.
-let Fname = prompt("What is your first name: ")
 
-// Display their name on the webpage.
-document.write(`Welcome ${Fname}. ` )
+// Setting up for loop to start at 1 and eend at 10
+for (let i = 1; i <= 10; i++) {
+    // If i/2 has a remainder of 0, then it is even. Otherwise, it is odd
+    if (i % 2 == 0) {
+        document.write(`Count ${i} is even. `)
+    } else {
+        document.write(`Count ${i} is odd. `)
+    }
+}
 
-// Set variable for pi value.
-const piValue = 3.1415926
 
-// Set favnum variable to what the user will input for the question.
-let myFavNum = prompt("What is your favorite number?")
+// Set the variable to what the user will input
+let myNum = prompt("Pick a number between 5 and 20")
+// Set the counter to start at 1
+let counter = 1
 
-// Display their favorite number on the webpage.
-document.write(`You entered ${myFavNum} as your favorite number. `)
+// The loop will write 1, and while the counter is less than or equal to the user's number, it will keep writing
+// The loop will stop once the user's number is reached
+do {
+    document.write(`${counter}, `)
+    counter ++
+} while (counter <= myNum)
 
-// Set area variable to "pi * radius^2" by plugging in the pi value for pi, and their favorite number as the radius.
-let myArea = piValue * myFavNum ** 2
+// Setting array of string values
+let array = ["Accounting", "Algebra", "Programming", "Art", "Data Analytics"]
 
-// Display the area on the webpage.
-document.write(`If that was the radius of a circle, the area would be ${myArea}. ` )
+// For each value in the array, write out that value 
+array.forEach((value) => {
+    document.write(`${value}, `)
+})
