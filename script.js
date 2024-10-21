@@ -23,9 +23,15 @@ do {
 } while (counter <= myNum)
 
 // Setting array of string values
+let text = ""
 let array = ["Accounting", "Algebra", "Programming", "Art", "Data Analytics"]
 
-// For each value in the array, write out that value 
-array.forEach((value) => {
-    document.write(`${value}, `)
-})
+// For each value in the array, perform the function
+array.forEach(myFunction)
+
+// Function that will run for each array value
+function myFunction (value, index) {
+    text += index + ": " + value + "<br>"
+}
+
+document.getElementById("forEach").innerHTML = text
