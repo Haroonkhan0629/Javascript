@@ -27,16 +27,17 @@ let tip = 0
 let amount = prompt("How much was the service? ($5 - $500): ")
 if (validAmount(amount) == true) {
     let quality = prompt("Quality of the service? (great, ok, or poor):")
-    validService(quality)
-    if (quality == "great") {
-        tip = 0.20
-    } else if (quality == "ok") {
-        tip = 0.15
-    } else if (quality == "poor") {
-        tip = 0.10
+    if (validService(quality) == true) {
+        if (quality == "great") {
+            tip = 0.20
+        } else if (quality == "ok") {
+            tip = 0.15
+        } else if (quality == "poor") {
+            tip = 0.10
+        } 
+        calcTip(amount, tip, quality)
     }
 
-    calcTip(amount, tip, quality)
 }
 
 
