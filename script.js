@@ -1,44 +1,39 @@
+const myDog = {
+    myName: "Astro",
+    mySound: "I am not scary",
+    myTelevision: "The Jetsons",
+    myBreed: "Great Dane",
+} 
+
+let text = `My name is ${myDog.myName}, when I bark ${myDog.mySound}. I am from the television show ${myDog.myTelevision}, and my character is a ${myDog.myBreed}.`
+document.getElementById("dog").innerText = text
 
 
-const validAmount = (amount) => {
-    if (amount >= 5 && amount <= 500) {
-        return true
-    } else {
-        alert("Invalid Input")
-        return false
+
+class myDogConst {
+    constructor(myName, mySound, myProgram, myBreed, canTalk) {
+      this.myName = myName
+      this.mySound = mySound
+      this.myProgram = myProgram
+      this.myBreed = myBreed
+      this.canTalk = canTalk
     }
-}
-
-const validService = (quality) => {
-    if (quality == "great" || quality == "ok" || quality == "poor") {
-        return true
-    } else {
-        alert("Invalid Input")
-        return false
-    }
-}
-
-const calcTip = (amount, tip, quality) => {
-    tipAmount = tip * 100
-    alert(`Your service was $${amount}, your recommended tip is $${tipAmount}, based on the ${quality} rating you gave us.`)
-}
-
-let tip = 0
-let amount = prompt("How much was the service? ($5 - $500): ")
-if (validAmount(amount) == true) {
-    let quality = prompt("Quality of the service? (great, ok, or poor):")
-    if (validService(quality) == true) {
-        if (quality == "great") {
-            tip = 0.20
-        } else if (quality == "ok") {
-            tip = 0.15
-        } else if (quality == "poor") {
-            tip = 0.10
-        } 
-        calcTip(amount, tip, quality)
+   
+    myGreeting() {
+        return `My name is ${this.myName}, when I bark ${this.mySound}. I am from the television show ${this.myTelevision}, and my character is a ${this.myBreed}.`
     }
 
-}
+    if (_canTalk = true) {
+        myGreeting()
+    }
+   
+  }
+   
+  const dog2 = new myDogConst("Astro", "I am a cool, calm and collected family dog", "The Jetsons", "Great Dane", true) 
+
+  let text2 = `My name is ${myDog.myName}, when I bark ${myDog.mySound}. I am from the television show ${myDog.myTelevision}, and my character is a ${myDog.myBreed}.`
+  document.getElementById("constDog").innerText = text2
+
 
 
 
