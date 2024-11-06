@@ -40,7 +40,7 @@ const dog = new Dog("Astro", "I am a cool, calm and collected family dog", "The 
 const dog2 = new Dog("Bailey", "I am one of Clifford's friends", "Clifford the Big Red Dog", "Australian Shepherd", true) 
 const sentance = []
 
-let answer = prompt("Select Astro or Bailey")
+let answer = prompt("Select Astro or Bailey:")
 
 if (answer == "Astro") {
     let text = dog.myGreeting()
