@@ -1,38 +1,68 @@
-const myDog = {
-    myName: "Astro",
-    mySound: "I am not scary",
-    myTelevision: "The Jetsons",
-    myBreed: "Great Dane",
-} 
-
-let text = `My name is ${myDog.myName}, when I bark ${myDog.mySound}. I am from the television show ${myDog.myTelevision}, and my character is a ${myDog.myBreed}.`
-document.getElementById("dog").innerText = text
-
-
-
-class myDogConst {
-    constructor(myName, mySound, myProgram, myBreed, canTalk) {
+class Dog {
+    constructor(myName, mySound, myTelevision, myBreed, canTalk) {
       this.myName = myName
       this.mySound = mySound
-      this.myProgram = myProgram
+      this.myTelevision = myTelevision
       this.myBreed = myBreed
       this.canTalk = canTalk
     }
    
     myGreeting() {
-        return `My name is ${this.myName}, when I bark ${this.mySound}. I am from the television show ${this.myTelevision}, and my character is a ${this.myBreed}.`
+        if (this.canTalk == true) {
+            for (const key in dog) {
+                if (dog.hasOwnProperty(key)) {
+                    sentance.push(key + ": " + dog[key])
+                }
+            }
+
+            return sentance
+        } else {
+            return "I can't talk"
+        }
     }
 
-    if (_canTalk = true) {
-        myGreeting()
-    }
-   
-  }
-   
-  const dog2 = new myDogConst("Astro", "I am a cool, calm and collected family dog", "The Jetsons", "Great Dane", true) 
+    myGreeting2() {
+        if (this.canTalk == true) {
+            for (const key in dog2) {
+                if (dog2.hasOwnProperty(key)) {
+                    sentance.push(key + ": " + dog2[key])
+                }
+            }
 
-  let text2 = `My name is ${myDog.myName}, when I bark ${myDog.mySound}. I am from the television show ${myDog.myTelevision}, and my character is a ${myDog.myBreed}.`
-  document.getElementById("constDog").innerText = text2
+            return sentance
+        } else {
+            return "I can't talk"
+        }
+    }
+    
+}
+const dog = new Dog("Astro", "I am a cool, calm and collected family dog", "The Jetsons", "Great Dane", true) 
+const dog2 = new Dog("Bailey", "I am one of Clifford's friends", "Clifford the Big Red Dog", "Australian Shepherd", true) 
+const sentance = []
+
+let answer = prompt("Select Astro or Bailey")
+
+if (answer == "Astro") {
+    let text = dog.myGreeting()
+    document.getElementById("dog").innerText = text
+
+} else if (answer == "Bailey") {
+    let text = dog2.myGreeting2()
+    document.getElementById("dog").innerText = text
+    
+} else {
+    alert("Not an Option, Try Again!")
+}
+
+
+
+
+
+
+  
+  
+
+
 
 
 
